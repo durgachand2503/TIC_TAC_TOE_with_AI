@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe AI Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-robot"></i> Tic-Tac-Toe AI Challenge</h1>
+            <p class="tagline">Play against an unbeatable AI opponent powered by the minimax algorithm</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="game-section">
+                <div class="status" id="status">Your turn! You are X</div>
+                
+                <div class="board" id="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                
+                <div class="ai-thinking" id="aiThinking">
+                    <i class="fas fa-cog fa-spin"></i> AI is thinking...
+                </div>
+                
+                <div class="controls">
+                    <button id="restartBtn"><i class="fas fa-redo"></i> Restart Game</button>
+                    <button class="secondary" id="newGameBtn"><i class="fas fa-plus-circle"></i> New Game</button>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h2 class="stats-title">Game Statistics</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Games Played</div>
+                        <div class="stat-value" id="gamesPlayed">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Your Wins</div>
+                        <div class="stat-value" id="playerWins">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">AI Wins</div>
+                        <div class="stat-value" id="aiWins">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Draws</div>
+                        <div class="stat-value" id="draws">0</div>
+                    </div>
+                </div>
+                
+                <div class="difficulty">
+                    <h3>AI Difficulty</h3>
+                    <select id="difficulty">
+                        <option value="unbeatable">Unbeatable (Minimax)</option>
+                        <option value="hard">Hard</option>
+                        <option value="medium">Medium</option>
+                        <option value="easy">Easy</option>
+                    </select>
+                </div>
+                
+                <div class="instructions">
+                    <h3>How to Play</h3>
+                    <p>You are <span class="highlight">X</span>, and the AI is <span class="highlight">O</span>.</p>
+                    <p>Click on any empty cell to place your mark. The AI will respond immediately after your move.</p>
+                    <p>Try to get three of your marks in a row - horizontally, vertically, or diagonally.</p>
+                    <p>The AI uses the <span class="highlight">minimax algorithm</span> which makes it unbeatable in optimal play.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created with advanced AI algorithms | Try to achieve a draw against the unbeatable AI!</p>
+        </footer>
+    </div>
+
+   
+</body>
+</html>
